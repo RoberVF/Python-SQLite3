@@ -13,5 +13,5 @@
 
 6. En caso de que quiera eliminar un dato, establezca el ID del dato y pulse Delete(En los botones de abajo) o CRUD-> Eliminar. Una vez eliminado no habra forma de recuperarlo
 
-**El apartado borrar eliminara los datos escritos en las casillas, no los escritos en la base de datos. Esto puede ser util a la hora de insertar varios usuarios**
-**Al ejecutar el programa se guardara en la misma carpeta en al que se encuentra un archivo .db en el que almacenaran los datos. Es muy importante conservarlo ya que sin el no se podra acceder a la informacion**
+**El apartado borrar eliminara los datos escritos en las casillas, no los escritos en la base de datos. Esto puede ser util a la hora de insertar varios usuarios.**
+** Al ejecutar el programa se guardara en la misma carpeta en al que se encuentra un archivo .db en el que almacenaran los datos. Es muy importante conservarlo ya que sin el no se podra acceder a la informacion.**
