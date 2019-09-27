@@ -57,9 +57,9 @@ def create():
 		"','" + correo.get() +
 		"','" + cuadroComentario.get("1.0", END) + "')")"""
 
-	dates= nombre.get(), apellido.get(), cial.get(), clase.get(), domicilio.get(), correo.get(), cuadroComentario.get(1.0, END)
+	dates= id.get(), nombre.get(), apellido.get(), cial.get(), clase.get(), domicilio.get(), correo.get(), cuadroComentario.get("1.0", END)
 
-	cursor.execute("INSERT INTO USUARIO VALUES(?,?,?,?,?,?,?)", dates)
+	cursor.execute("INSERT INTO USUARIO VALUES(?,?,?,?,?,?,?,?)", dates)
 
 	conexion.commit()
 
@@ -120,6 +120,10 @@ def delete():
 
 	messagebox.showinfo("Delete", "Registro eliminado con exito")
 
+def paginaWeb():
+	import webbrowser
+	webbrowser.open("https://github.com/RoberVF/Python-SQL/edit/master/README.md", new=2, autoraise=True)
+
 #===Menu===#
 barraMenu= Menu(root)
 root.config(menu=barraMenu, width=300, height=300)
@@ -138,8 +142,7 @@ crudMenu.add_command(label= "Update", command= update)
 crudMenu.add_command(label= "Delete", command= delete)
 
 ayudaMenu= Menu(barraMenu, tearoff=0)
-ayudaMenu.add_command(label= "Licencia")
-ayudaMenu.add_command(label= "Acerca de...")
+ayudaMenu.add_command(label="Ayuda", command=paginaWeb)
 
 barraMenu.add_cascade(label= "BBDD", menu=bbddMenu)
 barraMenu.add_cascade(label= "Borrar", menu=borrarMenu)
